@@ -1,0 +1,17 @@
+.article {
+    display: flex;
+    align-items: stretch;
+    height: 30rem;
+}
+.article > * {
+    width: 50%;
+}
+.article:nth-child(even) .image{
+    order: 2;
+}
+.text {
+    padding: 10% 10%;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}

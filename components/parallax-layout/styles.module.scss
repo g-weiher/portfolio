@@ -1,0 +1,88 @@
+/* --- parallax styles --- */
+.container {
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-perspective: 1px;
+    perspective: 1px;
+    perspective-origin: 0 0;
+}
+  
+.parallaxLayer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transform-origin: 0 0;
+}
+.background {
+    transform: translateZ(-2px) scale(3);
+}
+.middleground {
+    transform: translateZ(-1px) scale(2);
+}
+.foreground {
+    transform: translateZ(0px);
+}
+/* ---- hero content styling --- */
+
+.hero > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.logo {
+    padding: 3rem 0 0 3rem;
+    color:white;
+}
+
+.heading {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    padding: 0 0 5rem 3rem;
+    color:white;
+    h1 {
+        font-size: 3rem;
+        letter-spacing: 0.05em;
+    
+    }
+    h3 {
+        font-size: 1.5rem;
+        font-weight: 400;
+        letter-spacing: 0.03em;    
+    }
+}
+
+
+/* ---- styling of main content box ----*/
+.contentWrapper {
+    top:100vh;
+    left: 0;
+    width: 100%;
+    height: max-content;
+    padding-bottom: 300px;
+}
+.mainContent {
+    min-height: 100vh;
+    background-color: white;
+    width: 100%;
+}
+
+.footer {
+    z-index: -1;
+    position: fixed;
+    bottom: 0;
+    left:0;
+    width: 100%;
+    height: 300px;
+    background-color: grey;
+    color: white;
+    padding: 3rem 3rem 5rem 3rem;
+    display: flex;
+    justify-content: center;
+}
+.footer > *:not(:nth-child(1)){
+    margin-left: 2rem;
+}

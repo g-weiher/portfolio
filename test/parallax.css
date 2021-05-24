@@ -1,0 +1,38 @@
+.container {
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-perspective: 1px;
+    perspective: 1px;
+    perspective-origin: 0 0;
+  }
+  
+.parallax-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transform-origin: 0 0;
+}
+.background {
+    transform: translateZ(-2px) scale(3);
+}
+.middleground {
+    transform: translateZ(-1px) scale(2);
+}
+.foreground {
+    transform: translateZ(0px);
+}
+/* ---- styling of main content box ----*/
+.content-wrapper {
+    top:100vh;
+    left: 0;
+    width: 100%; 
+    height: max-content;
+    padding-bottom: 300px;
+}
+.main-content {
+    background-color: white;
+    width: 100%;
+}

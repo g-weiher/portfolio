@@ -1,0 +1,41 @@
+.header {
+    position: fixed;
+    top:0;
+    right: 0;
+    height: 100vh;
+    z-index: 10;
+}
+.sidebar {
+    height: 100%;
+    padding: 2rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+.drawer.active {
+    transform: none;
+    visibility: visible;
+}
+.drawer {
+    z-index: -1;
+    position: absolute;
+    top:0;
+    right: 0;
+    background-color: rgba(40,40,40,0.6);
+    width: 60vw;
+    height: 100%;
+    transform: translateX(100%);
+    visibility: hidden;
+    transition: 0.3s;
+}
+.drawer nav {
+    display: flex;
+    flex-direction: column;
+    padding: 5rem;
+}
+.drawer nav a {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: white;
+}

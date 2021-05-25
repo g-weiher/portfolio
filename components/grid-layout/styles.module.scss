@@ -1,0 +1,48 @@
+.gridLayout {
+    .article {
+        display: flex;
+        align-items: stretch;
+        height: 30rem;
+
+        .content {
+            padding: 10% 10%;
+            display: flex;
+            justify-content: center;
+            align-items:center;
+        }
+        .imageContainer {
+            position: relative;
+            img {
+                object-fit: cover;
+                object-position: center;
+                width: 100%;
+                height: 100%;
+            }
+            .placeholder {
+                width: 100%;
+                height: 100%;
+            }
+            .imageOverlay {
+                z-index: 1;
+                position: absolute;
+                top:0;
+                left:0;
+                width: 100%;
+                height: 100%;
+                mix-blend-mode: color;
+
+            }
+            
+        }
+        
+        > * {
+            width: 50%;
+        }
+    }
+    & .article:nth-child(even) {
+        .imageContainer {
+            order: 2;
+        }
+
+    }
+}

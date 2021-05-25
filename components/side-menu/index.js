@@ -9,8 +9,6 @@ const SideMenu = ({ children }) => {
     const [showMenu, setShowMenu] = useState(false);
     useScrollPosition(
         ({ currPos }) => {
-            console.log(currPos);
-            console.log(isScrolled);
             const isShow = currPos.y < -100;
             if (isShow !== isScrolled) setScrolled(isShow);
         },

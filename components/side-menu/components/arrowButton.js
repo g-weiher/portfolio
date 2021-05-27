@@ -1,4 +1,4 @@
-import styles from "./menu-button.module.css";
+import styles from "./menu-button.module.scss";
 
 const ArrowButton = ({className, up, hidden}) => {
     /*const onScroll = (top) => {

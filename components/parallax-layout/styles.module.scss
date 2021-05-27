@@ -29,14 +29,16 @@ $footer-height: 300px;
 }
 /* ---- hero content styling --- */
 
-.hero > img {
+.hero  .image {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    background-color: var(--primary-dark);
+    filter: grayscale(30%) brightness(70%);
 }
 .logo {
     padding: 3rem 0 0 3rem;
-    color:white;
+    color:var(--primary-bright);
 }
 
 .heading {
@@ -44,14 +46,18 @@ $footer-height: 300px;
     justify-content: flex-end;
     flex-direction: column;
     padding: 0 0 5rem 3rem;
-    color:white;
+    color:var(--primary-bright);
     h1 {
-        font-size: 3rem;
-        letter-spacing: 0.05em;
+        font-size: 4rem;
+        letter-spacing: 0.04em;
+        padding-bottom: 0.8rem;
+        .dot {
+            color: var(--accent1);
+        }
     
     }
     h3 {
-        font-size: 1.5rem;
+        font-size: 1.8rem;
         font-weight: 400;
         letter-spacing: 0.03em;    
     }
@@ -68,7 +74,7 @@ $footer-height: 300px;
 }
 .mainContent {
     min-height: 100vh;
-    background-color: white;
+    background-color: var(--primary-bright);
     width: 100%;
 }
 
@@ -79,8 +85,8 @@ $footer-height: 300px;
     left:0;
     width: 100%;
     height: $footer-height;
-    background-color: grey;
-    color: white;
+    background-color: var(--primary-light);
+    color: var(--primary-bright);
     padding: 3rem 3rem 5rem 3rem;
     display: flex;
     justify-content: center;

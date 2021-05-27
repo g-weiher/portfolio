@@ -1,5 +1,6 @@
 import styles from "./styles.module.scss";
 import cn from 'classnames'
+import Image from "next/image";
 
 export const GridLayout = ({children, className}) => {
     return (
@@ -13,7 +14,7 @@ const renderImage = (image, imageAlt, imageBG) => {
         return <div className={styles.placeholder} style={{backgroundColor: imageBG}}></div>;
     return (
         <>
-        <img  src={image} alt={imageAlt}/>
+        <Image  src={image} alt={imageAlt} layout="fill"/>
         {imageBG ? <div className={styles.imageOverlay} style={{backgroundColor: imageBG}}/> : null}
         </>
     )

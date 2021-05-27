@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Image from "next/image"
 import styles from "./styles.module.scss";
 import SideMenu from "../side-menu";
 import cn from 'classnames'
@@ -24,19 +25,20 @@ export default function Layout({ children, home }) {
                 <meta name="og:title" content={siteTitle} />
                 <meta name="twitter:card" content="summary_large_image" />
             </Head>
-            <SideMenu>
-                <a href="#">link1</a>
-                <a href="#">link2</a>
-                <a href="#">link2</a>
-                <a href="#">link2</a>
-            </SideMenu>
+    
             <div id="scroll-container" className={styles.container}>
                 <div id="scroll-anchor"></div>
+                <SideMenu>
+                    <a href="#">link1</a>
+                    <a href="#">link2</a>
+                    <a href="#">link2</a>
+                    <a href="#">link2</a>
+                </SideMenu>
                 <div className={cn([styles.parallaxLayer],[styles.background],[styles.hero])}>
-                    <img src="/images/MartinMajoor--Pic.jpg" />
+                    <Image className={styles.image} src="/images/MartinMajoor--Pic.jpg" layout="fill" priority/>
                 </div>
                 <div className={cn([styles.parallaxLayer],[styles.middleground],[styles.heading])}>
-                    <h1>I am the heading boiiii</h1>
+                    <h1><span className={styles.dot}>.</span>Georg Weiher</h1>
                     <h3>
                         I am a subheading with a little bit more text and stuff
                     </h3>

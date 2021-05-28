@@ -24,7 +24,7 @@ const SideMenu = ({ children }) => {
         <header className={styles.header}>
             <div id="sideMenu" className={styles.sidebar}>
                 <div>
-                    <MenuButton onClick={() => onToggleMenu()} />
+                    <MenuButton open={showMenu} onClick={() => onToggleMenu()} />
                     {isScrolled ? (
                         <ArrowButton up />
                     ) : (

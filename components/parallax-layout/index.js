@@ -29,10 +29,11 @@ export default function Layout({ children, home }) {
             <div id="scroll-container" className={styles.container}>
                 <div id="scroll-anchor"></div>
                 <SideMenu>
-                    <a href="#">link1</a>
-                    <a href="#">link2</a>
-                    <a href="#">link2</a>
-                    <a href="#">link2</a>
+                    <a href="#">about me</a>
+                    <a href="#">coding</a>
+                    <a href="#">illustration</a>
+                    <a href="#">sketchbook</a>
+                    <a href="#">contact</a>
                 </SideMenu>
                 <div className={cn([styles.parallaxLayer],[styles.background],[styles.hero])}>
                     <Image className={styles.image} src="/images/MartinMajoor--Pic.jpg" layout="fill" priority/>

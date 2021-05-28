@@ -30,7 +30,20 @@
     justify-content: space-between;
     align-items: stretch;
     > * {
+        transform-origin: center center;
         border-top: var(--border);
+    }
+    &.open {
+        justify-content: center;
+        > .line1 {
+            transform: rotate(45deg);
+        }
+        > .line2 {
+            visibility: hidden;
+        }
+        > .line3 {
+            transform: rotate(-45deg);
+        }
     }
 }
 .arrowButton {
